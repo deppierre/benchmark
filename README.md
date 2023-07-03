@@ -1,2 +1,9 @@
 # benchmark
- 
+
+## Build new image
+docker build -t ycsb_benchmark .
+
+## Run docker image
+docker run --rm -d --name newYcsb ycsb_benchmark
+docker exec -w /usr/local/ycsb newYcsb ./bin/ycsb.sh load mongodb -s -P benchmark
+docker exec -w /usr/local/ycsb newYcsb ./bin/ycsb.sh run mongodb -s -P benchmark
