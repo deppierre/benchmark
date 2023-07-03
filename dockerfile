@@ -1,6 +1,3 @@
-# docker build -t ycsb_benchmark .
-# cd ycsb && ./bin/ycsb.sh load mongodb -s -P benchmark
-# ./bin/ycsb.sh run mongodb -s -P benchmark
 FROM centos
 
 ARG MAVEN_VERSION=3.9.3
